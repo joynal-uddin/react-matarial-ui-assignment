@@ -69,7 +69,7 @@ const PostDetails = () => {
 
     useEffect(() => {
         const commentsLength = 5;
-        const image_url = `https://randomuser.me/api/?results=${commentsLength}&inc=picture`;
+        const image_url = `https://cors-anywhere.herokuapp.com/https://randomuser.me/api/?results=${commentsLength}&inc=picture`;
         fetch(image_url)
             .then(res => res.json())
             .then(data => setImages(data.results))
